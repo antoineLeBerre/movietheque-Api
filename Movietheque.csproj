@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Data\Configurations" />
+      <Folder Include="Data\Models" />
+      <Folder Include="Data\Repository\Impl" />
+      <Folder Include="Models\Converters" />
+      <Folder Include="Services\Impl" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="EntityFramework" Version="6.4.0" />
+      <PackageReference Include="EntityFramework.Core" Version="7.0.0-rc1-final" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.0" />
+    </ItemGroup>
+
+</Project>
