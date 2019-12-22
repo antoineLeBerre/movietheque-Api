@@ -1,5 +1,6 @@
 
 using Microsoft.EntityFrameworkCore;
+using Movietheque.Data.Configurations;
 
 namespace Movietheque.Data
 {
@@ -11,6 +12,11 @@ namespace Movietheque.Data
 
         public MoviethequeContext(DbContextOptions options) : base(options)
         {
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new UserConfigurator());
         }
     }
 }

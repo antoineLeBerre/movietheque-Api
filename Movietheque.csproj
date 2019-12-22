@@ -5,10 +5,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Data\Configurations" />
-      <Folder Include="Data\Models" />
-      <Folder Include="Data\Repository\Impl" />
-      <Folder Include="Models\Converters" />
       <Folder Include="Services\Impl" />
     </ItemGroup>
 
@@ -16,6 +12,7 @@
       <PackageReference Include="EntityFramework" Version="6.4.0" />
       <PackageReference Include="EntityFramework.Core" Version="7.0.0-rc1-final" />
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.0" />
       <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.0" />
     </ItemGroup>
 

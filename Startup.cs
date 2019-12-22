@@ -6,10 +6,12 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Movietheque.Data;
 
 namespace Movietheque
 {
@@ -28,7 +30,7 @@ namespace Movietheque
             SupervisorDi(services);
             RepositoryDi(services);
             services.AddControllers();
-            services.AddDbContext<FilmothequeContext>(options =>
+            services.AddDbContext<MoviethequeContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
         }
 
@@ -51,12 +53,12 @@ namespace Movietheque
 
         private static void SupervisorDi(IServiceCollection services)
         {
-            services.AddScoped<IUserSupervisor, UserSupervisor>();
+            //services.AddScoped<IUserSupervisor, UserSupervisor>();
         }
 
         private static void RepositoryDi(IServiceCollection services)
         {
-            services.AddScoped<IUserRepository, UserRepository>();
+            // services.AddScoped<IUserRepository, UserRepository>();
         }
     }
 }
