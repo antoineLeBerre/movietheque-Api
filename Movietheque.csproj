@@ -5,10 +5,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Services\Impl" />
-    </ItemGroup>
-
-    <ItemGroup>
       <PackageReference Include="EntityFramework" Version="6.4.0" />
       <PackageReference Include="EntityFramework.Core" Version="7.0.0-rc1-final" />
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
